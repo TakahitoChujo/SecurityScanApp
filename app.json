@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "Security Scan Shots",
+    "slug": "security-scan-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "securityscan",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0e1a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jyojorian.securityscan",
+      "infoPlist": {
+        "NSCameraUsageDescription": "QRコードをスキャンして安全性の簡易チェックに使用します",
+        "NSLocalNetworkUsageDescription": "Wi-Fiネットワークの簡易的なリスク確認に使用します",
+        "NFCReaderUsageDescription": "NFCタグのスキャンに使用します",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0e1a"
+      },
+      "package": "com.jyojorian.securityscan",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_WIFI_STATE",
+        "ACCESS_NETWORK_STATE",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-camera",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "顔認証が設定されているか確認します"
+        }
+      ],
+      "expo-font",
+      "expo-asset"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9c064d42-a02a-4b6b-90b1-d793d70a7496"
+      }
+    },
+    "owner": "toyland"
+  }
+}
