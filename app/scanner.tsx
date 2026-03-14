@@ -65,7 +65,7 @@ export default function ScannerScreen() {
         <Ionicons name="camera-outline" size={64} color="#4a5568" />
         <Text style={styles.permText}>カメラの許可が必要です</Text>
         <TouchableOpacity style={styles.permButton} onPress={requestPermission}>
-          <Text style={styles.permButtonText}>許可する</Text>
+          <Text style={styles.permButtonText}>続ける</Text>
         </TouchableOpacity>
       </View>
     );
